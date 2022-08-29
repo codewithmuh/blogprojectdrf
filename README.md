@@ -1,7 +1,7 @@
 # Blog REST API's using Django Rest FrameWork
 
-### In This A user can access it  its own blogs, post, delete and update.
-### Also I have cretaed Public API to access all Blogs
+##### In This A user can access it  its own blogs, post, delete and update.
+##### Also I have cretaed Public API to access all Blogs
 
 
 #### I did this project for my Intereste.
