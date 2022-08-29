@@ -10,8 +10,35 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.db.models import Q
 from django.core.paginator import Paginator
 
+# This class is used to fetch all the blogs from the database
 
-
+class PublicBlogView(APIView):
+    def get(self, request):
+        try:
+            blogs = Blog.objects.all()
+            
+            if request.GET.get('search'):
+                search = request.GET.get('search')
+                blogs = blogs.filter(Q(title__icontains = search) | Q(blog_text__icontains = search))
+                
+            page_number = request.GET.get('page', 1)
+            paginator = Paginator(blogs, 5)     
+            
+            serializer = BlogSerializer(paginator.page(page_number), many =True)
+        
+            return Response({
+                  'data': serializer.data,
+                  'message': 'Blogs data fetched successfully'
+            }, status= status.HTTP_200_OK)
+            
+        except Exception as e:
+             print(e)
+             return Response({
+                   'data' : {},
+                   'message' : 'something went wrong in data access'
+                }, status= status.HTTP_400_BAD_REQUEST) 
+     
+    
 
 # This class is used to create, update, delete and list blogs
 
