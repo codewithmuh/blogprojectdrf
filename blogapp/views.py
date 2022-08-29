@@ -1,3 +1,4 @@
+# This is importing all the necessary libraries and modules for the project.
 from django.shortcuts import render
 from .models import Blog
 from .serializers import BlogSerializer
@@ -10,10 +11,9 @@ from django.db.models import Q
 from django.core.paginator import Paginator
 
 
-# Create your views here.
 
 
-
+# This class is used to create, update, delete and list blogs
 
 class BlogView(APIView):
     permission_classes = [IsAuthenticated]

@@ -6,6 +6,7 @@ from . import models
 
 @admin.register(models.Blog)
 
+# The BlogAdmin class is a subclass of the admin.ModelAdmin class. 
 class BlogAdmin(admin.ModelAdmin):
     
     fields = [

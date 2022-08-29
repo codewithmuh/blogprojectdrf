@@ -1,6 +1,8 @@
 from rest_framework import serializers
 
 from . import models
+# > This class is a serializer for the Blog model. It will serialize all fields except for the
+# created_at and updated_at fields
 
 class BlogSerializer(serializers.ModelSerializer):
     
@@ -8,6 +10,4 @@ class BlogSerializer(serializers.ModelSerializer):
         model = models.Blog
         exclude = ['created_at', 'updated_at']
         
-        #fields =[
-        #    'title', 'user','blog_text', 'main_image'
-        #]
+    

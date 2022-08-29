@@ -7,6 +7,10 @@ from rest_framework import status
 
 
 # Create your views here.
+# The RegisterView class is a subclass of APIView. It has a post method that takes in a request
+# object. It then tries to serialize the data in the request object. If the serialization is
+# successful, it saves the data and returns a response with a message. If the serialization is not
+# successful, it returns a response with an error message
 
 class RegisterView(APIView):
 
@@ -35,6 +39,7 @@ class RegisterView(APIView):
                    'message' : 'something went wrong'
                 }, status= status.HTTP_400_BAD_REQUEST)
 
+# It takes in a request, validates the request, and returns a response
 
 class LoginView(APIView):
 

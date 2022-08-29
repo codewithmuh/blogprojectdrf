@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 
+# The RegisterSerializer class inherits from the Serializer class, and it has four fields: first_name,
+# last_name, username, and password
+
 class RegisterSerializer(serializers.Serializer):
     first_name = serializers.CharField()
     last_name = serializers.CharField()
@@ -27,6 +30,10 @@ class RegisterSerializer(serializers.Serializer):
         user.save()
         return validated_data
 
+# The LoginSerializer class is a subclass of the Serializer class. It has two fields, username and
+# password. The validate method checks if the username exists in the database. If it does not exist,
+# it raises a validation error. The get_jwt_token method authenticates the user and returns a JWT
+# token
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
