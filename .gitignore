@@ -108,3 +108,5 @@ celerybeat-schedule.db
 
 # Ignore .idea
 .idea/
+
+staticfiles/
