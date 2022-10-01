@@ -6,6 +6,17 @@ from django.contrib.auth import authenticate
 # The RegisterSerializer class inherits from the Serializer class, and it has four fields: first_name,
 # last_name, username, and password
 
+
+class ChangePasswordSerializer(serializers.Serializer):
+    model = User
+
+    """
+    Serializer for password change endpoint.
+    """
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
+    
+    
 class RegisterSerializer(serializers.Serializer):
     first_name = serializers.CharField()
     last_name = serializers.CharField()
