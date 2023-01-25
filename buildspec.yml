@@ -24,8 +24,8 @@ phases:
       - echo Build completed on `date`
 
 artifacts:
-files:
-   - '**/*'
-base-directory: /home/ubuntu/blogprojectdrf-2      
-name: dev--backend-build-artifact
-discard-paths: no
+  files:
+    - '**/*'
+  base-directory: /home/ubuntu/blogprojectdrf-2      
+  name: dev--backend-build-artifact
+  discard-paths: no
