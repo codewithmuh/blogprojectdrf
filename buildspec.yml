@@ -25,6 +25,6 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: /home/ubuntu/blogprojectdrf/
+  base-directory: blogprojectdrf
   name: build-artifact-name
   discard-paths: no
