@@ -1,0 +1,37 @@
+version: 0.0
+os: linux
+files: 
+  - source: /
+    destination: /home/ubuntu/ci-cd-django
+permissions:
+  - object: /home/ubuntu/ci-cd-django
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  BeforeInstall:
+      - location: scripts/clean_instance.sh
+        timeout: 300
+        runas: ubuntu
+  AfterInstall:
+      - location: scripts/instance_os_dependencies.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/python_dependencies.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/gunicorn.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/nginx.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStop:
+      - location: scripts/stop_app.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
+      - location: scripts/start_app.sh
+        timeout: 300
+        runas: ubuntu
+  
+  
