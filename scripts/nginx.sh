@@ -2,8 +2,8 @@
 
 sudo systemctl daemon-reload
 systemctl restart gunicorn.service
-sudo cp /nginx/nginx.conf /etc/nginx/sites-available/blogprojectdrf-2
-sudo ln -s /etc/nginx/sites-available/blogprojectdrf-2 /etc/nginx/sites-enabled
+sudo cp /nginx/nginx.conf /etc/nginx/sites-available/blogprojectdrf
+sudo ln -s /etc/nginx/sites-available/blogprojectdrf /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
 sudo ufw delete allow 8000

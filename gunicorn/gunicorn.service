@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/blogprojectdrf-2
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/blogprojectdrf-2/main/main.sock main.wsgi:application
+WorkingDirectory=/home/ubuntu/blogprojectdrf
+ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/blogprojectdrf/main/main.sock main.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
