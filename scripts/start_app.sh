@@ -4,6 +4,7 @@ sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/blogprojectdrf/blog/settings.py
 
 
 sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
 sudo service gunicorn restart
 sudo service nginx restart
 
