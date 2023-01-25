@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rm -rf /home/ubuntu/blogprojectdrf-1/*
+rm -rf /home/ubuntu/blogprojectdrf-2/*
