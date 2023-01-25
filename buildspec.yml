@@ -25,6 +25,3 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: blogprojectdrf
-  name: build-artifact-name
-  discard-paths: no
