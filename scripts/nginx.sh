@@ -3,7 +3,7 @@
 
 sudo systemctl daemon-reload
 
-systemctl restart gunicorn.service
+sudo systemctl restart gunicorn.service
 sudo rm -f /etc/nginx/sites-enabled/default
 
 sudo cp /home/ubuntu/blogprojectdrf/nginx/nginx.conf /etc/nginx/sites-available/blog
