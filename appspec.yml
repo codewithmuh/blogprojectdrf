@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/ci-cd-django
+    destination: /home/ubuntu/blogprojectdrf-1
 permissions:
-  - object: /home/ubuntu/ci-cd-django
+  - object: /home/ubuntu/blogprojectdrf-1
     owner: ubuntu
     group: ubuntu
 hooks:
