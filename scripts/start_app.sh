@@ -2,6 +2,7 @@
 
 sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/blogprojectdrf/blog/settings.py
 
+python manage.py collectstatics
 sudo service gunicorn restart
 sudo service nginx restart
 #sudo tail -f /var/log/nginx/error.log
