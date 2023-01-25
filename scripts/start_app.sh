@@ -5,9 +5,10 @@ sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/blogprojectdrf/blog/settings.py
 
 sudo systemctl restart gunicorn
 sudo systemctl status gunicorn
+sudo systemctl status nginx
 sudo service gunicorn restart
 sudo service nginx restart
-#sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/error.log
 #sudo systemctl reload nginx
 #sudo tail -f /var/log/nginx/error.log
 #sudo nginx -t
