@@ -11,5 +11,6 @@ sudo nginx -t
 sudo systemctl restart nginx
 sudo nginx -t
 sudo service nginx restart
+sudo tail -f /var/log/nginx/error.log
 
 
