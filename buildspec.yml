@@ -1,6 +1,6 @@
 version: 0.1
 
-environment_variables:
+# environment_variables:
   # plaintext:
   #   DJANGO_SETTINGS_MODULE: config.settings.test
   #   SECRET_KEY: nosecret
