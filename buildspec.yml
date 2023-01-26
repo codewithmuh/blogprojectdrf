@@ -1,0 +1,27 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    DJANGO_SETTINGS_MODULE: config.settings.test
+    SECRET_KEY: nosecret
+    DATABASE_DEFAULT_URL: sqlite:///db1.sqlite3
+    DATABASE_STREAMDATA_URL: sqlite:///db2.sqlite3
+    STREAM_INCOMING_PRIVATE_KEY: changeme
+    STREAM_INCOMING_PUBLIC_KEY: changeme
+    GOOGLE_API_KEY: changeme
+    OPBEAT_ENABLED: False
+
+phases:
+  pre_build:
+    commands:
+      - echo Prebuild ops
+      - pip3 install -r requirements.txt
+  build:
+    commands:
+      - echo Building the application 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
