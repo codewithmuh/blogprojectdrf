@@ -2,7 +2,7 @@
 
 ssh root@134.209.208.182 <<EOF
   cd blogprojectdrf
-  git pull
+  git pull origin master
   source env/bin/activate
   ./manage.py migrate
   sudo systemctl restart nginx
