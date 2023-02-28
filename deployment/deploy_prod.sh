@@ -4,7 +4,6 @@ ssh root@134.209.208.182 <<EOF
   cd blogprojectdrf
   git pull
   source env/bin/activate
-  pip install -r requirements.txt
   ./manage.py migrate
   sudo systemctl restart nginx
   sudo service gunicorn restart
