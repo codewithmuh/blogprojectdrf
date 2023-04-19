@@ -2,36 +2,36 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/blogprojectdrf
+    destination: /home/ec2-user/blogprojectdrf
 permissions:
-  - object: /home/ubuntu/blogprojectdrf
-    owner: ubuntu
-    group: ubuntu
+  - object: /home/ec2-user/blogprojectdrf
+    owner: ec2-user
+    group: ec2-user
 hooks:
   BeforeInstall:
       - location: scripts/clean_instance.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
   AfterInstall:
       - location: scripts/instance_os_dependencies.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user 
       - location: scripts/python_dependencies.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
       - location: scripts/gunicorn.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
       - location: scripts/nginx.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
   ApplicationStop:
       - location: scripts/stop_app.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
   ApplicationStart:
       - location: scripts/start_app.sh
         timeout: 300
-        runas: ubuntu
+        runas: ec2-user
   
   
