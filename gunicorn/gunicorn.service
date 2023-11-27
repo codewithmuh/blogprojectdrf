@@ -2,14 +2,15 @@
 Description=gunicorn daemon
 Requires=gunicorn.socket
 After=network.target
+
 [Service]
-User=root
+User=ubuntu
 Group=www-data
-WorkingDirectory=/root/YourProjectDirectoryName
-ExecStart=/root/YourProjectDirectoryName/env/bin/gunicorn \
+WorkingDirectory=/home/ubuntu/financetracker
+ExecStart=/home/ubuntu/financetracker/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          yourSettingsFileFoldername.wsgi:application
+          mysite.wsgi:application
 [Install]
 WantedBy=multi-user.target

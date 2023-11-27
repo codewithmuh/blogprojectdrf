@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-virtualenv /home/ubuntu/env
-source /home/ubuntu/env/bin/activate
-pip install -r /home/ubuntu/blogprojectdrf/requirements.txt
+sudo chown -R ubuntu:ubuntu ~/financetracker
+virtualenv /home/ubuntu/financetracker/venv
+source /home/ubuntu/financetracker/venv/bin/activate
+pip install -r /home/ubuntu/financetracker/requirements.txt
