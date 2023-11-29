@@ -21,6 +21,7 @@ This repository contains a Django project and configurations for a CI/CD pipelin
 git clone https://github.com/your-username/your-django-project.git
 
 #### 2. Follow the YouTube video for details
+```
 
 ![Youtube Video Link for CI/CD] (https://www.youtube.com/embed/pXNB8uAGlx8?si=QaVHT6NpcSt8uWna)
 
