@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo chown -R ubuntu:ubuntu ~/financetracker
-virtualenv /home/ubuntu/financetracker/venv
-source /home/ubuntu/financetracker/venv/bin/activate
-pip install -r /home/ubuntu/financetracker/requirements.txt
+sudo chown -R ubuntu:ubuntu ~/Project_folder_name
+virtualenv /home/ubuntu/Project_folder_name/venv
+source /home/ubuntu/Project_folder_name/venv/bin/activate
+pip install -r /home/ubuntu/Project_folder_name/requirements.txt
