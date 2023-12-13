@@ -25,3 +25,6 @@ git clone https://github.com/your-username/your-django-project.git
 ### Youtube Video Link for CI/CD : https://www.youtube.com/embed/pXNB8uAGlx8?si=QaVHT6NpcSt8uWna
 
 
+<a href="https://www.buymeacoffee.com/codewithmuh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+
